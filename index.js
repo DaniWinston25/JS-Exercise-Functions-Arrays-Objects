@@ -106,18 +106,16 @@ function getCarInfoByIndex(arr, index) {
 
 /**
  * ### Challenge `getLastCarInfo`
- *
- * @instructions
- * getLastCarInfo takes a single argument:
- *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
- * getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
- *
- * For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
- * it will return `This is a Lincoln Town Car`.
+ * @instructions getLastCarInfo takes a single argument:
+    (1) an array which is an inventory of cars like the one inside /data/inventory.js.
+getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
+
+For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
+it will return `This is a Lincoln Town Car`.
+ * @param {{ car_make: any; car_model: any; }} array
  */
-function getLastCarInfo(arr) {
-  const cars = arr;
-  return `This is a ${cars.car_make} ${cars.car_model}`;
+function getLastCarInfo(array) {
+  return `This is a ${array.car_make} ${array.car_model}`;
 }
 
 /**
@@ -157,8 +155,9 @@ function sortCarInventory(inventory) {}
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears() {
+
+
 }
 
 /**
