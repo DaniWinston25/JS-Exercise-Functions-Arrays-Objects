@@ -112,10 +112,13 @@ getLastCarInfo returns a string in the format `This is a {car_make} {car_model}
 
 For example, if getLastCarInfo is invoked passing the inventory inside /data/inventory.js,
 it will return `This is a Lincoln Town Car`.
- * @param {{ car_make: any; car_model: any; }} array
+ * 
  */
-function getLastCarInfo(array) {
-  return `This is a ${array.car_make} ${array.car_model}`;
+function getLastCarInfo(arr) {
+  const carArray = arr;
+  const lastCar = carArray[carArray.length -1];
+  // carArray =["all the cars are now in here"]
+return `This is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
 
 /**
@@ -130,10 +133,11 @@ function getLastCarInfo(array) {
  * For example, if getCarInfoById is invoked with the inventory and the number 1,
  * it will return `This is a Lincoln Navigator`.
  */
-function getCarInfoById(arr, inventory) {
-  const cars = arr;
-  const carsId = inventory;
-  return `This is a ${cars.car_make} ${cars.car_model};`;
+function getCarInfoById(arr, id) {
+  const carArray = arr;
+  const id = id;
+  const car = ''
+  
 }
 
 /**
