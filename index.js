@@ -116,9 +116,9 @@ it will return `This is a Lincoln Town Car`.
  */
 function getLastCarInfo(arr) {
   const carArray = arr;
-  const lastCar = carArray[carArray.length -1];
+  const lastCar = carArray[carArray.length - 1];
   // carArray =["all the cars are now in here"]
-return `This is a ${lastCar.car_make} ${lastCar.car_model}`;
+  return `This is a ${lastCar.car_make} ${lastCar.car_model}`;
 }
 
 /**
@@ -134,10 +134,9 @@ return `This is a ${lastCar.car_make} ${lastCar.car_model}`;
  * it will return `This is a Lincoln Navigator`.
  */
 function getCarInfoById(arr, id) {
-  const carArray = arr;
-  const id = id;
-  const car = ''
-  
+  // const carArray = arr;
+  // const id = id;
+  // const car = ''
 }
 
 /**
@@ -148,7 +147,27 @@ function getCarInfoById(arr, id) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * sortCarInventory returns an inventory that is sorted by car_model, ascending [A-Z].
  */
-function sortCarInventory(inventory) {}
+function sortCarInventory(inventory) {
+  // console.log(inventory);
+  // console.log("length is: ", inventory.length);
+  // for (let i = 0; i < inventory.length; i++) {
+  // console.log(i);
+  // console.log(inventory[i]);
+  // }
+  // console.log(inventory.reverse());
+  inventory.sort(function(a, b) {
+    var x = a.car_model.toLowerCase();
+    var y = b.car_model.toLowerCase();
+    if (x < y) {
+      return -1;
+    }
+    if (x > y) {
+      return 1;
+    }
+    return 0;
+  });
+  return inventory;
+}
 
 /**
  * ### Challenge `getModelYears`
@@ -159,10 +178,7 @@ function sortCarInventory(inventory) {}
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears() {
-
-
-}
+function getModelYears() {}
 
 /**
  * ### Challenge `getOlderCars`
