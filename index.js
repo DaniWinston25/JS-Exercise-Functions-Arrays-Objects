@@ -184,8 +184,7 @@ function sortCarInventory(inventory) {
 function getModelYears(arr) {
   // console.log(inventory);
   const carArray = arr;
-  const index = carArray.car_year;
-  const car = carArray[index];
+  const car = carArray;
   console.log(`This is a ${car.car_year}`);
   // var i = i.car_year.toLowerCase();
   // console.log(inventory);
