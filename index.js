@@ -134,9 +134,12 @@ function getLastCarInfo(arr) {
  * it will return `This is a Lincoln Navigator`.
  */
 function getCarInfoById(arr, id) {
-  // const carArray = arr;
-  // const id = id;
-  // const car = ''
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].id == id) {
+      let car = arr[i];
+      return `This is a ${car.car_make} ${car.car_model}`;
+    }
+  }
 }
 
 /**
@@ -207,8 +210,21 @@ function getOlderCars(/* code here */) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
  */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(data) {
+  let GermanCars = [];
+  // console.log(data);
+  for (let i = 0; i < data.length; i++)
+    if (
+      data[i].car_make === "Audi" ||
+      data[i].car_make === "Mercedes-Benz" ||
+      data[i].car_make === "Volkswagen" ||
+      data[i].car_make === "BMW"
+    ) {
+      // console.log(data[i]);
+      GermanCars.push(data[i]);
+    }
+  // console.log(GermanCars);
+  return GermanCars;
 }
 
 /**
@@ -229,9 +245,17 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
  */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (x, y) => {
+  return x + y;
+};
+
+const addFive = num => {
+  return num + 5;
+};
+
+const argTimesTwo = num => {
+  return num * 2;
+};
 
 /**
  * ### Challenge `carMaker`
